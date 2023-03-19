@@ -1,10 +1,12 @@
-type Card = {
+export type CardType = {
   id: number;
   amount: number;
+  number: number;
   name: string;
   expirationDate: string;
   cvv: string;
   transactions: Array<Transaction>;
+  status: "active" | "inactive" | "blocked";
 };
 
 type Transaction = {
@@ -13,7 +15,7 @@ type Transaction = {
   description: string;
 };
 
-type Cards = Array<Card>;
+type Cards = Array<CardType>;
 
 export type UserType = {
   id: string;

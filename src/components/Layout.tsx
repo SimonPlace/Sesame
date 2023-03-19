@@ -92,10 +92,10 @@ export default function Nav({
                     </Select>
                   </Center>
                   <br />
-                  <MenuDivider />
 
                   {isLoggedIn() && (
                     <>
+                      <MenuDivider />
                       <MenuItem>
                         <Link to="cards">Vos cartes</Link>
                       </MenuItem>

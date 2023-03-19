@@ -2,6 +2,7 @@ import { ChakraProvider } from "@chakra-ui/react";
 import React from "react";
 import "./App.css";
 import Nav from "components/Layout";
+import CardList from "components/CardList";
 import "./index.css";
 import useAuth from "hooks/useAuth";
 
@@ -19,6 +20,7 @@ function App() {
         isLoggedIn={isLoggedIn}
         logout={logout}
       />
+      {isLoggedIn() && <CardList user={user} />}
     </ChakraProvider>
   );
 }
