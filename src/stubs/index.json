@@ -1,0 +1,55 @@
+{
+    "users": [
+        {
+            "name": "Wednesday",
+            "imgUrl": "https://deadline.com/wp-content/uploads/2022/09/WEDNESDAY-JENNA-ORTEGA_GALLERY-SINGLE_0287R2C.jpg?w=800",
+            "lastName": "adams",
+            "id": "1",
+            "cards": [
+                {
+                    "name": "card 1",
+                    "number": "123456789",
+                    "expirationDate": "12/12/2020",
+                    "cvv": "123",
+                    "transactions": [
+                        {
+                            "amount": "100",
+                            "date": "12/12/2020",
+                            "description": "Subway"
+                        },
+                        {
+                            "amount": "200",
+                            "date": "12/12/2020",
+                            "description": "KFC"
+                        },
+                        {
+                            "amount": "300",
+                            "date": "12/12/2020",
+                            "description": "Quick"
+                        }
+                    ],
+                    "solde": "600"
+                }]
+        },
+        {
+            "name": "Fetide",
+            "lastName": "adams",
+            "id": "2"
+        },
+        {
+            "name": "Fetide",
+            "lastName": "adams",
+            "id": "3"
+        },
+        {
+            "name": "Morticia",
+            "imgUrl": "https://media.vogue.fr/photos/637df1fb20134248cd8c224d/2:3/w_2560%2Cc_limit/WEDNESDAY_105_Unit_00921R.jpg",
+            "lastName": "adams",
+            "id": "4"
+        },
+        {
+            "name": "The thing",
+            "lastName": "adams",
+            "id": "5"
+        }]
+}
