@@ -8,11 +8,20 @@ import {
   Text,
   Button,
   Checkbox,
+  Box,
 } from "@chakra-ui/react";
-import { CardType } from "types/types";
-import { ViewIcon } from "@chakra-ui/icons";
+import { CardType, UserType } from "types/types";
+import { ViewIcon, DeleteIcon } from "@chakra-ui/icons";
 
-const CreditCard = ({ card }: { card: CardType }) => {
+const CreditCard = ({
+  card,
+  deleteCard,
+  user,
+}: {
+  card: CardType;
+  deleteCard: (cardId: string, user: UserType) => void;
+  user: UserType;
+}) => {
   const [isHidden, setIsHidden] = useState(true);
   return (
     <Card margin="20px auto" width={"100%"}>
@@ -29,9 +38,18 @@ const CreditCard = ({ card }: { card: CardType }) => {
           justifyContent={"space-between"}
         >
           <Text>{isHidden ? "•••" : card.cvv}</Text>{" "}
-          <Button onClick={() => setIsHidden(false)}>
-            <ViewIcon />
-          </Button>
+          <Box>
+            <Button onClick={() => setIsHidden(false)} margin="0 10px">
+              <ViewIcon />
+            </Button>
+            <Button
+              onClick={() => {
+                deleteCard(card.id, user);
+              }}
+            >
+              <DeleteIcon />
+            </Button>
+          </Box>
         </Flex>
       </CardBody>
     </Card>

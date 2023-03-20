@@ -20,6 +20,11 @@ const useAuth = () => {
     }
   };
 
+  const modifyUser = (user: UserType) => {
+    localStorage.setItem("user", JSON.stringify(user));
+    setUser(user);
+  };
+
   const logout = () => {
     localStorage.removeItem("user");
     setUser(null);
@@ -50,6 +55,7 @@ const useAuth = () => {
     getAllUsers,
     isLoggedIn,
     getCurrentUser,
+    modifyUser,
   };
 };
 

@@ -1,12 +1,11 @@
 export type CardType = {
-  id: number;
+  id: string;
   amount: number;
   number: number;
   name: string;
   expirationDate: string;
   cvv: string;
   transactions: Array<Transaction>;
-  status: "active" | "inactive" | "blocked";
 };
 
 type Transaction = {
